@@ -3,20 +3,268 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Backend Development Projects</title>
+  <title>Kanika Agarwal | Backend Development Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f1d;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-blue: #38bdf8;
+      --accent-purple: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.025em;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-blue);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 12px 24px -10px rgba(56, 189, 248, 0.15);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-demo {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-code {
+      background: rgba(168, 85, 247, 0.15);
+      color: var(--accent-purple);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-action {
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card-action-demo { color: var(--accent-blue); }
+    .card-action-code { color: var(--accent-purple); }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Web Projects Dashboard</h1>
-  <ul>
-    <li><a href="./backend/day1/">Day 1</a></li>
-    <li><a href="./backend/day2/">Day 2</a></li>
-    <li><a href="./backend/day4/">Day 4</a></li>
-    <li><a href="./backend/Experiment1/">Experiment 1</a></li>
-    <li><a href="./backend/Experiment12A/">Experiment 12A</a></li>
-    <li><a href="./backend/Experiment12B/">Experiment 12B</a></li>
-    <li><a href="./backend/notes-app/">Notes App</a></li>
-    <li><a href="./backend/session-control/">Session Control</a></li>
-    <li><a href="./backend/todo-app/">Todo App</a></li>
-  </ul>
+
+  <header>
+    <h1>Backend Projects Dashboard</h1>
+    <p>A centralized hub showcasing full-stack demonstrations, backend architectures, and API experiments.</p>
+  </header>
+
+  <div class="container">
+    <div class="section-title">Live Web Applications</div>
+    <div class="grid">
+      <a href="./backend/notes-app/" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Notes App</div>
+            <span class="badge badge-demo">Interactive</span>
+          </div>
+          <div class="card-desc">Full interactive web app for creating, editing, and managing notes.</div>
+        </div>
+        <div class="card-action card-action-demo">Launch Demo &rarr;</div>
+      </a>
+
+      <a href="./backend/Experiment1/" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Experiment 1</div>
+            <span class="badge badge-demo">Interactive</span>
+          </div>
+          <div class="card-desc">Frontend layout featuring embedded dynamic media playback.</div>
+        </div>
+        <div class="card-action card-action-demo">Launch Demo &rarr;</div>
+      </a>
+    </div>
+
+    <div class="section-title">Backend Architecture & Repositories</div>
+    <div class="grid">
+      <a href="https://github.com/kanikaagarwal006/BackendDevelopment/tree/main/day1" target="_blank" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Day 1 Server</div>
+            <span class="badge badge-code">Source Code</span>
+          </div>
+          <div class="card-desc">Introductory HTTP server implementation and routing logic.</div>
+        </div>
+        <div class="card-action card-action-code">View Code &rarr;</div>
+      </a>
+
+      <a href="https://github.com/kanikaagarwal006/BackendDevelopment/tree/main/day2" target="_blank" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Day 2 Service</div>
+            <span class="badge badge-code">Source Code</span>
+          </div>
+          <div class="card-desc">Python & Node.js environment configuration setups.</div>
+        </div>
+        <div class="card-action card-action-code">View Code &rarr;</div>
+      </a>
+
+      <a href="https://github.com/kanikaagarwal006/BackendDevelopment/tree/main/day4" target="_blank" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Day 4 Modules</div>
+            <span class="badge badge-code">Source Code</span>
+          </div>
+          <div class="card-desc">Core architectural diagrams and modular backend concepts.</div>
+        </div>
+        <div class="card-action card-action-code">View Code &rarr;</div>
+      </a>
+
+      <a href="https://github.com/kanikaagarwal006/BackendDevelopment/tree/main/Experiment12A" target="_blank" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Experiment 12A</div>
+            <span class="badge badge-code">Source Code</span>
+          </div>
+          <div class="card-desc">Custom API endpoint handlers and routing infrastructure.</div>
+        </div>
+        <div class="card-action card-action-code">View Code &rarr;</div>
+      </a>
+
+      <a href="https://github.com/kanikaagarwal006/BackendDevelopment/tree/main/Experiment12B" target="_blank" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Experiment 12B</div>
+            <span class="badge badge-code">Source Code</span>
+          </div>
+          <div class="card-desc">Cookie parsing mechanisms and Express middleware logic.</div>
+        </div>
+        <div class="card-action card-action-code">View Code &rarr;</div>
+      </a>
+
+      <a href="https://github.com/kanikaagarwal006/BackendDevelopment/tree/main/session-control" target="_blank" class="card">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Session Control</div>
+            <span class="badge badge-code">Source Code</span>
+          </div>
+          <div class="card-desc">State management and server-side session authentication.</div>
+        </div>
+        <div class="card-action card-action-code">View Code &rarr;</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    Kanika Agarwal &bull; Hosted on GitHub Pages
+  </footer>
+
 </body>
 </html>
